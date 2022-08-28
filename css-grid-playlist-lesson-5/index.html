@@ -1,60 +1,109 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Using CSS Grid</title>
 	<style>
-		body{
+		body {
 			color: #fff;
 			font-family: 'Nunito Semibold';
 			text-align: center;
 		}
-		#content{
+
+		#content {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(5, minmax(100px, auto));
 			grid-gap: 10px;
 			max-width: 960px;
 			margin: 0 auto;
 		}
-		#content div{
+
+		#content div {
 			background: #3bbced;
 			padding: 30px;
 		}
-		#content div:nth-child(even){
+
+		#content div:nth-child(even) {
 			background: #777;
 			padding: 30px;
 		}
-		.nested{
+
+		.one {
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}
+
+		.two {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+
+		.three {
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+		}
+
+		.five {
+			grid-column: 1 / 2;
+			grid-row: 4 / 5;
+		}
+
+		.six {
+			grid-column: 1 / 2;
+			grid-row: 5 / 6;
+		}
+
+
+		.nested {
+			grid-column: 2 / 4;
+			grid-row: 1 / 6;
+		}
+
+		.nested {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			grid-gap: 10px;
 			/*grid-column: span 3;*/
 		}
-		.nested p{
+
+		.nested p {
 			border: 1px solid #fff;
 			padding: 20px;
 			margin: 0;
 		}
 	</style>
 </head>
+
+
 <body>
 
 	<div id="content">
 
-		<div>1</div>
-		<div>2</div>
-		<div>3</div>
+		<div id="one">1</div>
+		<div id="two">2</div>
+		<div id="three">3</div>
 
 		<div class="nested">
-			<p>1</p>
-			<p>2</p>
-			<p>3</p>
-			<p>4</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quibusdam officia velit nobis rem quis,
+				tempora ullam fuga commodi praesentium nemo sequi, labore, molestias quod minus dolores accusamus. Quod,
+				magnam?</p>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias unde iure incidunt voluptates fugit
+				placeat deleniti accusamus! Nisi tempora aperiam molestiae, debitis, possimus sint obcaecati quia
+				reiciendis facere, corrupti a.</p>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem aut assumenda non explicabo! Sed minus
+				incidunt itaque eos impedit nobis, repellat odit earum, voluptatem suscipit cupiditate blanditiis
+				maiores, fuga quaerat.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, illo praesentium? Consectetur, officiis
+				nesciunt impedit unde explicabo voluptas ipsa nostrum rerum nobis repudiandae? Adipisci facilis numquam
+				illum blanditiis eveniet repudiandae.</p>
 		</div>
 
-		<div>5</div>
-		<div>6</div>
+		<div id="five">5</div>
+		<div id="six">6</div>
 
 	</div>
 
 </body>
+
 </html>
