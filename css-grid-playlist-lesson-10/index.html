@@ -17,12 +17,12 @@
             margin: 0 auto;
             grid-template-areas:
                 "header header header header"
-                "footer footer footer footer"
-                "main main main main"
-                "main main main main"
-                "aside aside nav nav"
+                "main main main nav"
+                "main main main aside"
+                "main main main aside"
                 "section section section section"
-                "section section section section";
+                "section section section section"
+                "footer footer footer footer";
         }
         /* desktop grid */
         @media screen and (min-width: 760px){
@@ -63,7 +63,6 @@
         }
         footer{
             grid-area: footer;
-            background: #333 !important;
         }
 	</style>
 </head>
